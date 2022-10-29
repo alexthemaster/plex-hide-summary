@@ -4,9 +4,9 @@
 
 ## What does it do?
 
-This script shuts off your Plex server and by opening the database used to store the metadata it modifies the summary of each movie and episode you haven't watched as so to not spoil you.
+This script shuts off your Plex server and by opening the database used to store the metadata, it modifies the summary of each movie and episode you haven't watched as to not spoil you.
 
-If the summary was removed in the past and you have since watched a movie/episode, that piece of media's summary will be re-added.
+If the summary was removed in the past, and you have since watched a movie/episode, that piece of media's summary will be re-added.
 
 After the process completes, the Plex server will be restarted.
 
