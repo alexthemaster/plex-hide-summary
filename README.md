@@ -1,6 +1,6 @@
 # plex-hide-summary
 
-⚠️ this script only works on Linux with the systemd service manager
+⚠️ this script only works on Linux distributions that use the systemd service manager
 
 ## What does it do?
 
