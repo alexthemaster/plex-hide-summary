@@ -1,0 +1,12 @@
+{
+  "name": "plex-hide-summary",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "repository": "https://github.com/alexthemaster/plex-hide-summary.git",
+  "author": "Alex Kovacs <alexdemaster@proton.me>",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^7.6.2"
+  }
+}
