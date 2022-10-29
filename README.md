@@ -1,10 +1,14 @@
 # plex-hide-summary
 
-(this script works on Linux with the systemd service manager)
+⚠️ this script only works on Linux with the systemd service manager
 
 ## What does it do?
 
-This script shuts off your Plex server and modifies the summary of each movie and episode you haven't watched as so to not spoil you. If the summary was removed in the past and you have since then watched the video, then it will be re-added. After the process completes, the Plex server will be restarted.
+This script shuts off your Plex server and by opening the database used to store the metadata it modifies the summary of each movie and episode you haven't watched as so to not spoil you.
+
+If the summary was removed in the past and you have since watched a movie/episode, that piece of media's summary will be re-added.
+
+After the process completes, the Plex server will be restarted.
 
 ## Usage
 
