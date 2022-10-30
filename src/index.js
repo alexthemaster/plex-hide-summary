@@ -14,7 +14,7 @@ const dbName = "com.plexapp.plugins.library.db";
 
 await execPromise("systemctl stop plexmediaserver");
 
-const summaries =
+let summaries =
   (await readFile(`${homedir()}/hiddenSummaries.json`)
     .then((buffer) => JSON.parse(buffer.toString()))
     .catch(() => null)) || {};
@@ -38,6 +38,12 @@ const watched = db
       item.guid.startsWith("plex://movie") ||
       item.guid.startsWith("plex://episode")
   );
+
+// Delete the summary from the old summaries if the movie/episode was delete
+for (const guid in summaries) {
+  if (items.find((item) => item.guid == guid)) continue;
+  else delete summaries[guid];
+}
 
 for (const item of items) {
   if (watched.some((watch) => watch.guid == item.guid)) {
