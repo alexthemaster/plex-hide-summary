@@ -57,7 +57,7 @@ for (const item of items) {
     summaries[item.guid] = item.summary;
 
     await executeQuery(
-      `UPDATE metadata_items SET summary = 'Summary hidden by https://github.com/alexthemaster/plex-hide-summary because you have not watched this yet.' WHERE guid = '${item.guid}'`
+      `UPDATE metadata_items SET summary = 'Summary hidden since you have not watched this yet. https://github.com/alexthemaster/plex-hide-summary' WHERE guid = '${item.guid}'`
     );
   }
 }
