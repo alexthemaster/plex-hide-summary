@@ -56,8 +56,6 @@ for (const item of items) {
         `UPDATE metadata_items SET summary = '${oldSummary}' WHERE guid = '${item.guid}'`
       );
     }
-
-    continue;
   } else {
     // Save summary to restore later
     summaries[item.guid] = item.summary;
