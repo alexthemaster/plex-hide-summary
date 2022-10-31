@@ -53,7 +53,10 @@ for (const item of items) {
       delete summaries[item.guid];
 
       await executeQuery(
-        `UPDATE metadata_items SET summary = '${oldSummary}' WHERE guid = '${item.guid}'`
+        `UPDATE metadata_items SET summary = '${oldSummary.replaceAll(
+          "'",
+          "\\'"
+        )}' WHERE guid = '${item.guid}'`
       );
     }
   } else {
