@@ -57,6 +57,7 @@ for (const item of items) {
       );
     }
   } else {
+    if (item.summary.startsWith("Summary hidden")) continue;
     // Save summary to restore later
     summaries[item.guid] = item.summary;
 
