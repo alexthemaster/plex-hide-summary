@@ -49,7 +49,9 @@ for (const item of items) {
   if (watched.some((watch) => watch.guid == item.guid)) {
     // If the summary was hidden but the user has since then watched this episode then update the summary to the initial one.
     if (item.summary.startsWith("Summary hidden")) {
-      const oldSummary = summaries[item.guid].replaceAll("'", "");
+      const oldSummary = summaries[item.guid]
+        ? summaries[item.guid].replaceAll("'", "")
+        : "Old summary not found.";
       delete summaries[item.guid];
 
       await executeQuery(
